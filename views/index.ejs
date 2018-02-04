@@ -1,0 +1,21 @@
+<%- include('header') -%>
+
+<div class = 'container'>
+  <% articles.forEach((articles) => { %>
+    <div class = 'card'>
+      <div class = 'card__image'>
+        <img src = '<%= articles.image %>' > </img>
+      </div>
+      <div class = 'card__content'>
+        <a href = 'article/<%=articles.slug%>'>
+          <h3 class = 'card__heading'><%= articles.title %></h3>
+        </a>
+        <p class = 'card__time'>
+          <%= articles.date%>
+        </p>
+      </div>
+    </div>
+  <% }) %>
+</div>
+
+<%- include('footer') -%>
